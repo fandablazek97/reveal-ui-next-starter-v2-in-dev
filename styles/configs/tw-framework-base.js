@@ -15,6 +15,10 @@ module.exports = {
       serif: "var(--font-serif)",
       mono: "var(--font-mono)",
     },
-    extend: {},
+    extend: {
+      animation: {
+        spiner: "spin .6s linear infinite",
+      },
+    },
   },
 };
