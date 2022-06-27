@@ -1,20 +1,43 @@
 import Button from "@/components/button/Button";
-import Wrapper from "@/components/wrapper/Wrapper";
+import Heading from "@/components/heading/Heading";
+import Container from "@/components/wrapper/Container";
 import type { NextPage } from "next";
+
+import { HiFire } from "react-icons/hi";
 
 const Home: NextPage = () => {
   return (
-    <Wrapper className="flex flex-col items-start justify-start">
-      <h1 className="mb-3 pb-3 text-6xl font-semibold text-primary">
-        Nextjs ui version 2 with typescript and storybook
-      </h1>
-      <div className="space-x-5">
-        <Button type="filled">Call to action</Button>
-        <Button type="outlined">Call to action</Button>
-        <Button type="tinted">Call to action</Button>
-        <Button type="plain">Call to action</Button>
+    <Container className="flex flex-col items-start justify-start">
+      <Heading level={6} size="sm">
+        Heading sm
+      </Heading>
+      <Heading level={6} size="base">
+        Heading base
+      </Heading>
+      <Heading level={6} size="lg">
+        Heading lg
+      </Heading>
+      <Heading level={6} size="xl">
+        Heading xl
+      </Heading>
+      {/* <Heading level={1} size="xl">
+        Nextjs ui v2 with typescript and storybook
+      </Heading> */}
+      <div className="mt-8 flex space-x-5">
+        <Button as="a" type="filled" shape="rounded" leftIcon={<HiFire />}>
+          Call to action
+        </Button>
+        <Button type="outlined" shape="rounded" leftIcon={<HiFire />}>
+          Call to action
+        </Button>
+        <Button type="tinted" shape="rounded" leftIcon={<HiFire />}>
+          Call to action
+        </Button>
+        <Button type="plain" shape="rounded" leftIcon={<HiFire />}>
+          Call to action
+        </Button>
       </div>
-    </Wrapper>
+    </Container>
   );
 };
 

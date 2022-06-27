@@ -1,5 +1,5 @@
 :root {
-  --color-primary: 243deg, 75%, 59%;
+  --color-primary: 243, 75%, 59%;
   --color-secondary: 192, 91%, 36%;
 
   --color-muted: var(--color-gray-600);
@@ -10,6 +10,12 @@
   --color-body-100: var(--color-gray-100);
   --color-body-200: var(--color-gray-200);
 
+  --color-success: 160, 84%, 39%;
+  --color-error: 347, 77%, 50%;
+  --color-warning: 38, 92%, 50%;
+  --color-info: 200, 98%, 39%;
+
+  /* Grays */
   --color-gray-50: 216, 16%, 98%;
   --color-gray-100: 220, 14%, 96%;
   --color-gray-200: 220, 13%, 91%;
@@ -36,4 +42,9 @@
   --color-body-50: var(--color-gray-800);
   --color-body-100: var(--color-gray-700);
   --color-body-200: var(--color-gray-600);
+
+  --color-success: 158, 64%, 52%;
+  --color-error: 351, 75%, 71%;
+  --color-warning: 43, 96%, 56%;
+  --color-info: 213, 94%, 68%;
 }

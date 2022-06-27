@@ -19,6 +19,10 @@ module.exports = {
       animation: {
         spiner: "spin .6s linear infinite",
       },
+      opacity: {
+        15: "0.15",
+        85: "0.85",
+      },
     },
   },
 };

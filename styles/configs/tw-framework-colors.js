@@ -27,6 +27,11 @@ module.exports = {
         "body-50": "hsla(var(--color-body-50), <alpha-value>)",
         "body-100": "hsla(var(--color-gray-100), <alpha-value>)",
         "body-200": "hsla(var(--color-gray-200), <alpha-value>)",
+
+        success: "hsla(var(--color-success), <alpha-value>)",
+        error: "hsla(var(--color-error), <alpha-value>)",
+        warning: "hsla(var(--color-warning), <alpha-value>)",
+        info: "hsla(var(--color-info), <alpha-value>)",
       },
     },
   },
