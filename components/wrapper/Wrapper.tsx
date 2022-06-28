@@ -1,4 +1,4 @@
-type ContainerProps = {
+type WrapperProps = {
   as?: React.ElementType;
   children: React.ReactNode;
   size?: "sm" | "base" | "lg";
@@ -11,13 +11,13 @@ let sizeClasses = {
   lg: "",
 };
 
-export default function Container({
+export default function Wrapper({
   as: Tag = "div",
   size = "base",
   className = "",
   children,
   ...rest
-}: ContainerProps) {
+}: WrapperProps) {
   return (
     <Tag
       className={`mx-auto w-[90%] ${sizeClasses[size]} ${className}`}

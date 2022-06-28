@@ -93,7 +93,7 @@ const sizeClasses = {
   lg: "px-8 py-5 text-lg",
 };
 
-export const Button = forwardRef<Ref, ButtonProps>(
+const Button = forwardRef<Ref, ButtonProps>(
   (
     {
       as: Tag = "button",

@@ -1,6 +1,14 @@
 type HeadingProps = {
   level: 1 | 2 | 3 | 4 | 5 | 6;
-  size?: "sm" | "base" | "lg" | "xl";
+  size?: "sm" | "base" | "lg" | "xl" | "none";
+  color?:
+    | "rich"
+    | "muted"
+    | "white"
+    | "black"
+    | "primary"
+    | "secondary"
+    | "none";
   hasSeparator?: boolean;
   separatorPosition?: "left" | "center" | "right";
   separatorColor?: "primary" | "secondary" | "white" | "black" | "current";
@@ -16,6 +24,18 @@ const sizeClasses = {
   base: "text-2xl",
   lg: "text-3xl md:text-4xl",
   xl: "text-4xl md:text-6xl",
+  none: "",
+};
+
+// Color classes
+const colorClasses = {
+  rich: "text-rich",
+  muted: "text-muted",
+  white: "text-white",
+  black: "text-gray-900",
+  primary: "text-primary",
+  secondary: "text-secondary",
+  none: "",
 };
 
 // Separator classes
@@ -37,19 +57,24 @@ const separatorColorClasses = {
 };
 
 export default function Heading({
-  level,
+  level = 1,
   size = "base",
+  color = "rich",
   hasSeparator = false,
   separatorPosition = "left",
   separatorColor = "primary",
   className = "",
   children,
+  ...rest
 }: HeadingProps) {
+  // dynamic tag generated from level prop
   const Tag = `h${level}` as HeadingTag;
 
   return (
     <Tag
-      className={`font-bold leading-[1.15] text-rich ${sizeClasses[size]} ${
+      className={`font-sans font-bold leading-[1.15] ${sizeClasses[size]} ${
+        colorClasses[color]
+      } ${
         hasSeparator
           ? separatorBaseClasses +
             " " +
@@ -58,6 +83,7 @@ export default function Heading({
             separatorColorClasses[separatorColor]
           : ""
       } ${className}`}
+      {...rest}
     >
       {children}
     </Tag>
